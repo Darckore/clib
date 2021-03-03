@@ -1,6 +1,7 @@
 #pragma once
 
 // std headers we'll most likely be using
+#include <cstddef>
 #include <type_traits>
 #include <utility>
 
@@ -20,6 +21,8 @@
 #include <filesystem>
 #include <memory>
 #include <stdexcept>
+
+#include <algorithm>
 
 // just because it is often needed everywhere
 using namespace std::literals;
