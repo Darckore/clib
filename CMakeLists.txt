@@ -31,7 +31,7 @@ set(LIB0_TARGET clib)
 set(TESTS_TARGET tests) 
 
 
-project(someproj CXX)
+project(clib_root CXX)
 
 set(TARGET_NAME ${LIB0_TARGET})
 add_subdirectory("${TARGET_NAME}")
