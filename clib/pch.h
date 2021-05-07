@@ -23,6 +23,7 @@
 #include <stdexcept>
 
 #include <algorithm>
+#include <concepts>
 
 // just because it is often needed everywhere
 using namespace std::literals;
