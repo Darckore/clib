@@ -5,6 +5,8 @@ namespace clib
   class key
   {
   public:
+    using string_type = std::string_view;
+
     enum class kind : uint8_t
     {
       cl_switch,    // -s
@@ -13,10 +15,10 @@ namespace clib
       cl_action,    // can associate a function with this one
     };
 
-    key() = delete;
-    key(const key&) = delete;
-    key& operator=(const key&) = delete;
-    key(key&&) = default;
-    key& operator=(key&&) = default;
+    CLIB_SPECIALS_NODEFAULT_NOCOPY(key);
+
+  private:
+    friend class clib_root;
+    key(int) {} //placeholder
   };
 }

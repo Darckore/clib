@@ -3,7 +3,7 @@
 
 namespace clib
 {
-  parser::parser([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
+  parser::parser(int /*argc*/, char** /*argv*/)
   {
   }
 }

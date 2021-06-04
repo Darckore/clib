@@ -5,12 +5,10 @@ namespace clib
   class parser
   {
   public:
-    parser() = delete;
-    parser(const parser&) = delete;
-    parser& operator=(const parser&) = delete;
-    parser(parser&&) = delete;
-    parser& operator=(parser&&) = delete;
+    CLIB_SPECIALS_NONE(parser);
 
+  private:
+    friend class clib_root;
     parser(int argc, char** argv);
 
   private:
