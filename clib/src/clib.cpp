@@ -7,4 +7,33 @@ namespace clib
   {
   }
 
+  //clib_root::key_type& clib_root::add_switch(string_type name)
+  //{
+
+  //}
+  //clib_root::key_type& clib_root::add_value(string_type name, string_type value)
+  //{
+
+  //}
+  //clib_root::key_type& clib_root::add_optional(string_type name, string_type value)
+  //{
+
+  //}
+
+  bool clib_root::has_key(string_type name) const noexcept
+  {
+    return static_cast<bool>(lookup(name));
+  }
+  clib_root::key_type* clib_root::lookup(string_type name) noexcept
+  {
+    using this_const = std::add_pointer_t<std::add_const_t<std::remove_pointer_t<decltype(this)>>>;
+    return const_cast<key_type*>(static_cast<this_const>(this)->lookup(name));
+  }
+  const clib_root::key_type* clib_root::lookup(string_type name) const noexcept
+  {
+    auto found = m_keys.find(name);
+    return found != m_keys.end()
+      ? &found->second
+      : nullptr;
+  }
 }

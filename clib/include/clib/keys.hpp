@@ -15,10 +15,16 @@ namespace clib
       cl_action,    // can associate a function with this one
     };
 
-    CLIB_SPECIALS_NODEFAULT_NOCOPY(key);
+    CLIB_SPECIALS_NODEFAULT(key);
 
   private:
     friend class clib_root;
-    key(int) {} //placeholder
+    explicit key(kind k);
+
+  public:
+    kind what_is() const noexcept;
+
+  private:
+    kind m_kind;
   };
 }
