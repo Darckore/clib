@@ -5,7 +5,7 @@ namespace clib
   class parser
   {
   public:
-    CLIB_SPECIALS_NONE(parser);
+    CLASS_SPECIALS_NONE(parser);
 
   private:
     friend class clib_root;

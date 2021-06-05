@@ -15,7 +15,7 @@ namespace clib
       cl_action,    // can associate a function with this one
     };
 
-    CLIB_SPECIALS_NODEFAULT(key);
+    CLASS_SPECIALS_NODEFAULT(key);
 
   private:
     friend class clib_root;

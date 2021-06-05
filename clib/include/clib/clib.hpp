@@ -12,7 +12,7 @@ namespace clib
     using key_store = std::unordered_map<string_type, key_type>;
 
   public:
-    CLIB_SPECIALS_NONE(clib_root);
+    CLASS_SPECIALS_NONE(clib_root);
 
     clib_root(int argc, char** argv);
 

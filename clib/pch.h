@@ -33,43 +33,5 @@ using namespace std::literals;
 #include "fmt/color.h"
 #include "fmt/compile.h"
 
-// macros
-#define CLIB_SPECIALS_ALL(clName)\
-  clName() = default;\
-  clName(const clName&) = default;\
-  clName& operator=(const clName&) = default;\
-  clName(clName&&) = default;\
-  clName& operator=(clName&&) = default;\
-  ~clName() = default
-
-#define CLIB_SPECIALS_NOCOPY(clName)\
-  clName() = default;\
-  clName(const clName&) = delete;\
-  clName& operator=(const clName&) = delete;\
-  clName(clName&&) = default;\
-  clName& operator=(clName&&) = default;\
-  ~clName() = default
-
-#define CLIB_SPECIALS_NODEFAULT(clName)\
-  clName() = delete;\
-  clName(const clName&) = default;\
-  clName& operator=(const clName&) = default;\
-  clName(clName&&) = default;\
-  clName& operator=(clName&&) = default;\
-  ~clName() = default
-
-#define CLIB_SPECIALS_NODEFAULT_NOCOPY(clName)\
-  clName() = delete;\
-  clName(const clName&) = delete;\
-  clName& operator=(const clName&) = delete;\
-  clName(clName&&) = default;\
-  clName& operator=(clName&&) = default;\
-  ~clName() = default
-
-#define CLIB_SPECIALS_NONE(clName)\
-  clName() = delete;\
-  clName(const clName&) = delete;\
-  clName& operator=(const clName&) = delete;\
-  clName(clName&&) = delete;\
-  clName& operator=(clName&&) = delete;\
-  ~clName() = default
+// utils submodule
+#include "../utils/utils.hpp"
