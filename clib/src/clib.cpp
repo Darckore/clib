@@ -26,8 +26,7 @@ namespace clib
   }
   clib_root::key_type* clib_root::lookup(string_type name) noexcept
   {
-    using this_const = std::add_pointer_t<std::add_const_t<std::remove_pointer_t<decltype(this)>>>;
-    return const_cast<key_type*>(static_cast<this_const>(this)->lookup(name));
+    return utils::mutate(std::as_const(*this).lookup(name));
   }
   const clib_root::key_type* clib_root::lookup(string_type name) const noexcept
   {
