@@ -17,10 +17,6 @@ namespace clib
     clib_root(int argc, char** argv);
 
   public:
-    key_type& add_switch(string_type name);
-    key_type& add_value(string_type name, string_type value);
-    key_type& add_optional(string_type name, string_type value);
-
     bool has_key(string_type name) const noexcept;
     
     template <key_type::kind K>

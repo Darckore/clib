@@ -14,6 +14,7 @@ namespace clib
       cl_opt_value, // -ov[=something]
       cl_action,    // can associate a function with this one
     };
+    using enum kind;
 
     CLASS_SPECIALS_NODEFAULT(key);
 

@@ -7,19 +7,6 @@ namespace clib
   {
   }
 
-  //clib_root::key_type& clib_root::add_switch(string_type name)
-  //{
-
-  //}
-  //clib_root::key_type& clib_root::add_value(string_type name, string_type value)
-  //{
-
-  //}
-  //clib_root::key_type& clib_root::add_optional(string_type name, string_type value)
-  //{
-
-  //}
-
   bool clib_root::has_key(string_type name) const noexcept
   {
     return static_cast<bool>(lookup(name));
