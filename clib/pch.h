@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <type_traits>
 #include <utility>
+#include <numeric>
 
 #include <iostream>
 #include <fstream>
