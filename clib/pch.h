@@ -1,8 +1,10 @@
 #pragma once
 
 // std headers we'll most likely be using
+#include <cstddef>
 #include <type_traits>
 #include <utility>
+#include <numeric>
 
 #include <iostream>
 #include <fstream>
@@ -21,6 +23,9 @@
 #include <memory>
 #include <stdexcept>
 
+#include <algorithm>
+#include <concepts>
+
 // just because it is often needed everywhere
 using namespace std::literals;
 
@@ -28,3 +33,6 @@ using namespace std::literals;
 #include "fmt/core.h"
 #include "fmt/color.h"
 #include "fmt/compile.h"
+
+// utils submodule
+#include "../utils/utils.hpp"
