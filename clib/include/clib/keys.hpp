@@ -2,30 +2,24 @@
 
 namespace clib
 {
-  class key
+  class key_descr
   {
   public:
-    using string_type = std::string_view;
 
-    enum class kind : uint8_t
-    {
-      cl_switch,    // -s
-      cl_value,     // -v=something
-      cl_opt_value, // -ov[=something]
-      cl_action,    // can associate a function with this one
-    };
-    using enum kind;
-
-    CLASS_SPECIALS_NODEFAULT(key);
-
-  private:
-    friend class clib_root;
-    explicit key(kind k);
 
   public:
-    kind what_is() const noexcept;
+    using string_t = std::string;
+
+  public:
+    CLASS_SPECIALS_NODEFAULT_NOCOPY(key_descr);
+
+    key_descr(string_t name, string_t help) noexcept :
+      m_name{ std::move(name) },
+      m_help{ std::move(help) }
+    {}
 
   private:
-    kind m_kind;
+    string_t m_help;
+    string_t m_name;
   };
 }

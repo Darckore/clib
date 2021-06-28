@@ -12,6 +12,7 @@
 #include <string>
 #include <string_view>
 
+#include <span>
 #include <array>
 #include <vector>
 #include <map>

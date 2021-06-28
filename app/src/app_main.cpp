@@ -1,7 +1,7 @@
-#include "clib/clib.hpp"
+#include "clib/parser.hpp"
 
 int main(int argc, char** argv)
 {
-  clib::clib_root args{ argc, argv };
+  clib::parser parser{ argc, argv };
   return 0;
 }
